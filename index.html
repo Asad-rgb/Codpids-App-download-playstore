@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Codpids - Download APP</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+   <link rel="icon" type="image/png" href="favicon-logo.png" class="favicon">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="app-header">
+      <button class="back-button" aria-label="Back">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+      <button class="menu-button" aria-label="Menu">
+        <i class="fas fa-ellipsis-v"></i>
+      </button>
+    </header>
+
+    <!-- App Info Section -->
+    <section class="app-info">
+      <img src="main-logo.png" alt="Codpids Logo" class="app-icon">
+      <div class="app-details">
+        <h1 class="app-title">Codpids - your plant doctor</h1>
+        <p class="app-developer">Codpids</p>
+        <div class="app-tags">
+          <span class="tag">Farming</span>
+          <span class="tag">Diagnosis</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download Button -->
+    <section class="download-section">
+      <button class="download-button" id="downloadBtn">
+        <i class="fas fa-download"></i>
+        <span>Download APP (34 MB)</span>
+      </button>
+      <p class="file-info">Version 1.2.2 • Updated June 2025</p>
+    </section>
+
+    <!-- Screenshots -->
+    <section class="screenshots">
+      <h2 class="section-title">Screenshots</h2>
+      <div class="screenshot-container">
+        <div class="screenshot">
+          <img src="screenshot3.jpg" alt="Screenshot 1">
+          <p>Fertilizer calculator</p>
+        </div>
+        <div class="screenshot">
+          <img src="screenshot2.jpg" alt="Screenshot 2">
+          <p>Farmers community</p>
+        </div>
+        <div class="screenshot">
+          <img src="screenshot1.jpg" alt="Screenshot 3">
+          <p>Cultivation tips</p>
+        </div>
+        <div class="screenshot">
+          <img src="screenshot3.jpg" alt="Screenshot 4">
+          <p>AI assistant</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- App Description -->
+    <section class="description">
+      <h2 class="section-title">About this app</h2>
+      <div class="description-content">
+        <p>Codpids App is a smart and easy-to-use tool for detecting plant diseases and insect damage just
+        by uploading a photo of a leaf. Powered by the Kindwise API, it can recognize over 14,000+ species.
+        , Codpids offers:</p>
+        <ul>
+          <li><i class="fas fa-check-circle"></i> Instant plant disease diagnosis</li>
+          <li><i class="fas fa-check-circle"></i> Bio-based treatment methods</li>
+          <li><i class="fas fa-check-circle"></i> The App is currently 100% free</li>
+          <li><i class="fas fa-check-circle"></i> Delivering up to 92% accuracy</li>
+          <li><i class="fas fa-check-circle"></i> Identify over 14,000 species</li>
+        </ul>
+        <p class="highlight">Download the app and detect disease on your plant with 92% accuracy!</p>
+      </div>
+    </section>
+
+    <!-- Additional Info -->
+    <section class="additional-info">
+      <h2 class="section-title">Additional Information</h2>
+      <div class="info-grid">
+        <div class="info-item">
+          <span class="info-label">Updated</span>
+          <span class="info-value">June 15, 2025</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Version</span>
+          <span class="info-value">1.2.2</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Size</span>
+          <span class="info-value">34 MB</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Downloads</span>
+          <span class="info-value">100+</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Android</span>
+          <span class="info-value">7.0 and up</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Content Rating</span>
+          <span class="info-value">15+</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Installation Modal -->
+    <div class="modal" id="installModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Installing Plantix</h3>
+          <button class="close-modal">&times;</button>
+        </div>
+        <div class="progress-container">
+          <div class="progress-bar" id="progressBar"></div>
+          <span class="progress-text" id="progressText">0%</span>
+        </div>
+        <div class="modal-body">
+          <div class="app-info-modal">
+            <img src="main-logo.png" alt="Codpids" class="modal-app-icon">
+            <div>
+              <h4>Codpids - your plant doctor</h4>
+              <p>34 MB • Version 1.2.2</p>
+            </div>
+          </div>
+          <div class="security-info">
+            <i class="fas fa-shield-alt"></i>
+            <span>Verified by Play Protect</span>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="cancel-btn">Cancel</button>
+          <button class="install-btn" disabled id="installBtn">Install</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Download Complete Modal -->
+    <div class="modal" id="completeModal">
+      <div class="modal-content complete-modal">
+        <div class="modal-header">
+          <h3>Download Complete</h3>
+        </div>
+        <div class="modal-body">
+          <div class="success-icon">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <p>Plantix APK has been downloaded successfully.</p>
+          <button class="open-file" id="openFileBtn">Open File</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <div class="footer-links">
+        <a href="https://codpids.netlify.app/privacy-policy">Privacy Policy</a>
+        <a href="https://codpids.netlify.app/terms-condition">Terms of Service</a>
+        <a href="https://codpids.netlify.app/">Our Website</a>
+      </div>
+      <p class="copyright">© 2025 Codpids. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
